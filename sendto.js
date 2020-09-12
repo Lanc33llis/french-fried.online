@@ -2,6 +2,8 @@ const userWantsRecipes = "I want recipes"
 const userWantsItemsForRecipe = "I want to know where to get the items for my recipe"
 const userWantsRecipesFromItems = "I want to know what recipes I can make with the items I have in my pantry"
 
+
+//need to use barba here somehow
 function submit(event) {
     let request = form.elements['want'].value
     if (request == userWantsRecipes){

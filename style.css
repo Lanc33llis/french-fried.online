@@ -21,3 +21,28 @@ main > form > input{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 3em
 }
+
+.fade-leave-active, .fade-enter-active {
+    transition: opacity .3s, transform .3s;
+    
+  }
+  
+  .fade-leave {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  
+  .fade-leave-to {
+    opacity: 0;
+    transform: translate(0, 30px);
+  }
+  
+  .fade-enter {
+    opacity: 0;
+    transform: translate(0, 30px);
+  }
+  
+  .fade-enter-to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
