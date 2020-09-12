@@ -1,31 +1,64 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        
-        <title>Home</title>
-    
-        <link href="normalize.css" rel="stylesheet">
-        <link href="style.css" rel="stylesheet">
-      </head>
-      <style>
-          html, body {
-            margin: 0;
-            height: 100%;
-        }
-      </style>
-        <section style="display: flex; flex-direction: column; width: 100%; height: 100%;">
-            <header style="height: 150px; display: flex; justify-content: center;">
-                <img src="images/frenchfriedlogo.svg" height="100%">
-            </header>
-            <main style="flex: 1 1">
-                <label for="items">What are you here for?</label>
-                <select id="items">
-                <option value="item-1">Finding cheapest items for your recipe</option>
-                <option value="item-2">Route for food</option>
-                <option value="item-3">Find recipes for items in your pantry</option>
-                </select>
-            </main>
-        </section>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Home</title>
+    <link href="normalize.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <style>
+    html,
+    body {
+      margin: 0px;
+      height: 100%;
+    }
+  </style>
+  <section
+    style="display: flex; flex-direction: column; width: 100%; height: 100%"
+  >
+    <br />
+    <header style="height: 150px; display: flex; justify-content: center">
+      <img src="images/frenchfriedlogo.svg" height="100%" />
+    </header>
+    <main
+      style="
+        flex: 1 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      "
+    >
+      <form
+        action="/"
+        method="get"
+        id="send"
+        style="
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+        "
+      >
+        <label class="label-header" for="want">What are you here for?</label>
+        <br /><br />
+        <input list="wants" name="want" id="want" style="width: 80%; height: 100px;" placeholder="I want..."></input>
+        <datalist id="wants">
+          <option value="I want recipes"></option>
+          <option
+            value="I want to know where to get the items for my recipe"
+          ></option>
+          <option
+            value="I want to know what recipes I can make with the items I have in my pantry"
+          ></option>
+        </datalist>
+
+        <br />
+        <input type="submit" value="Go!" style="display: none;"></input>
+      </form>
+      <script src="sendto.js"></script>
+    </main>
+  </section>
+  <script src="https://js.radar.io/v3/radar.min.js"></script>
 </html>
